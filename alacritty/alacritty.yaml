@@ -1,0 +1,32 @@
+live_config_reload: false 
+
+# add title for the alacritty bar 
+
+window:
+  title: Term-Alacritty
+
+startup_mode: Windowed # Supported => Windowed, Maximized, Fullscreen
+
+dimensions:
+  columns: 151
+  lines: 39
+position:
+  x: 300
+  y: 150
+
+opacity: 0.5 # Supported => 0.0(fully transparent) -> 1.0(opaque)
+
+cursor:
+  style:
+    shape: underline       # Supported => ▇ Block, _ Underline, | Beam
+    blinking: off          # Supported => Never, off, on, Always
+    vi_mode_style: Beam
+
+selection:
+  save_to_clipboard: true 
+
+scrolling:
+  history: 2000
+shell:
+  program: /bin/fish 
+
