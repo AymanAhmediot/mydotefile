@@ -8,14 +8,9 @@
 }
 
 window#waybar {
-    border-radius: 10px;
-    background: #010409;
-    color: #cdd6f4;
-}
-
-tooltip {
-    background: #010409;
-    border-radius: 10px;
+    background-color: #030305;
+    opacity: 0.9;
+    border-bottom: 0px solid #000000;
 }
 
 #workspaces button {
@@ -24,23 +19,22 @@ tooltip {
     margin-right: 5px;
 }
 
+#workspaces button:hover {
+    color: #fff;
+    box-shadow: inset 0 -3px #fff;
+}
+
 #workspaces button.active {
-    color: #a6adc8;
+    color: #D70040;
 }
 
 #workspaces button.focused {
-    color: #a6adc8;
-    background: #010409;
+    box-shadow: inset 0 -3px #c50ed2;
+    color: #c50ed2;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #010409;
-}
-
-#workspaces button:hover {
-    background: #010409;
-    color: #cdd6f4;
+    background-color: #eb4d4b;
 }
 
 #window,
@@ -77,7 +71,7 @@ tooltip {
 
 #clock {
     color: #fab387;
-    margin-right: 14px;
+    margin-right: 10px;
 }
 
 #network {

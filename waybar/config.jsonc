@@ -1,49 +1,58 @@
 {
-	"layer": "top",
-	"position": "top",
-	"margin": "0 0 0",
-	"mod": "dock",
-	"exclusive": true,
-	"passthrough": false,
-	"gtk-layer-shell": true,
-	"height": 20,
-	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": [
-		"battery",
-		"backlight",
-		"pulseaudio",
-		// "pulseaudio#microphone",
-		"clock",
+  	"layer": "top",
+	  "position": "top",
+	  "margin": "0 0 0",
+  	"mod": "dock",
+	  "exclusive": true,
+	  "passthrough": false,
+	  "gtk-layer-shell": true,
+    "height": 25,
+    
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "battery",
+        "backlight",
+        "pulseaudio",
         "tray"
-	],
-	"include": [],
-	"hyprland/window": {
-		"format": "{}"
-	},
-	"hyprland/workspaces": {
-		"all-outputs": true,
-		"on-click": "activate"
-	},
-	"tray": {
-		"icon-size": 18,
-		"spacing": 10
-	},
-	"clock": {
-		"format": "{:%H:%M}",
-		"tooltip-format": "{calendar}",
-		"calendar": {
-			"format": {
-				"months": "<span color='#ffead3'><b>{}</b></span>",
-				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-				"today": "<span color='#ffcc66'><b><u>{}</u></b></span>"
-			}
-		}
-	},
+
+    ],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{}",
+    },
+
+    "tray": {
+      	"icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%d %m %Y %I:%M %p}",
+        "timezone": "Asia/Baghdad",
+    		"tooltip-format": "{calendar}",
+		    "calendar": {
+			    "format": {
+				    "months": "<span color='#ffead3'><b>{}</b></span>",
+				    "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				    "today": "<span color='#ffcc66'><b><u>{}</u></b></span>"
+			    }
+		}       
+    },
+
 	"backlight": {
 		"device": "intel_backlight",
 		"format": "{icon} {percent}%",
-		"format-icons": ["󰃞", "󰃟", "󰃠"],
+		"format-icons": [" 󰃞 ", " 󰃟 ", " 󰃠 "],
 		"on-scroll-up": "brightnessctl set 10%+",
 		"on-scroll-down": "brightnessctl set 10%-",
 		"min-length": 6
@@ -55,10 +64,10 @@
 			"critical": 20
 		},
 		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
+		"format-charging": "   {capacity}%",
+		"format-plugged": "   {capacity}%",
 		"format-alt": "{time} {icon}",
-		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		"format-icons": [" 󰂎 ", " 󰁺 ", " 󰁻 ", " 󰁼 ", " 󰁽 ", " 󰁾 ", " 󰁿 ", " 󰂀 ", " 󰂁 ", " 󰂂 ", " 󰁹 "]
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
@@ -76,18 +85,13 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["", "", ""]
+			"default": ["  ", "  ", "   "]
 		}
 	},
-	"pulseaudio#microphone": {
-		"format": "{format_source}",
-		"format-source": " {volume}%",
-		"format-source-muted": " Muted",
-		"on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
-		"on-click-right": "pavucontrol",
-		"on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SOURCE@ 5%+",
-		"on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_SOURCE@ 5%-",
-		"scroll-step": 5
-	}
+	
+
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
 }
 
