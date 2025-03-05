@@ -29,7 +29,7 @@ sudo pacman -S kvantum-qt5 qt5ct qt6ct ttf-jetbrains-mono nwg-look --noconfirm -
 ## Nemo is default file manager in this config 
 
 ```
-sudo pacman -S nemo nemo-compare nemo-python nemo-fileroller nemo-dropbox nemo-share nemo-preview nemo-media-columns nemo-archiver --noconfirm --needed
+sudo pacman -S nemo nemo-compare nemo-python nemo-fileroller  nemo-share nemo-preview  --noconfirm --needed
 ```
 
 ## Paru is the best AUR helper in my opinion and that how you install it 
@@ -61,6 +61,14 @@ sudo systemctl --now enable bluetooth.service
 
 ```
 sudo pacman -S tmux --noconfirm --needed
+```
+
+## I use zen Browser is good and clean one 
+
+we will install it for the AUR
+
+```
+paru -S zen-browser-bin --noconfirm --needed
 ```
 
 ## Flatpak and theme
