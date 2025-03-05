@@ -15,6 +15,14 @@ The packages you need to get the same experience
 sudo pacman -Syu hyprland kitty mate-polkit waybar swaybg wofi fish network-manager-applet pavucontrol gammastep brightnessctl xorg-xwayland xdg-desktop-portal xdg-desktop-portal-gtk grim slurp xdg-desktop-portal-wlr --noconfirm --needed
 ```
 
+## If you don't have a Login manager just install LY
+
+```
+sudo pacman -S ly --noconfirm --needed
+sudo systemctl enable ly 
+```
+
+
 ## If you want alacritty 
 
 ```
