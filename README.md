@@ -117,7 +117,7 @@ mv config/* ~/.config
 If you want config of tmux just move 
 
 ```
-mv .tmux.conf
+mv .tmux.conf ~
 ```
 
 # And like always have fun !!
