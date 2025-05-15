@@ -1,0 +1,23 @@
+# ~/.config/mako/config
+
+# Colors
+background-color=#1c1c1c
+text-color=#ffffff
+border-color=#ff5555
+
+# Notification styling
+border-size=2
+padding=10
+margin=10
+default-timeout=5000
+
+# Font
+font=Ubuntu 11
+
+# Positioning
+anchor=top-right
+width=300
+height=100
+max-history=10
+icons=1
+

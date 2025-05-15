@@ -1,0 +1,97 @@
+{
+  	"layer": "top",
+	  "position": "top",
+	  "margin": "0 0 0",
+  	"mod": "dock",
+	  "exclusive": true,
+	  "passthrough": false,
+	  "gtk-layer-shell": true,
+    "height": 25,
+    
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "tray"
+
+    ],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{}",
+    },
+
+    "tray": {
+      	"icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%d %m %Y %I:%M %p}",
+        "timezone": "Asia/Baghdad",
+    		"tooltip-format": "{calendar}",
+		    "calendar": {
+			    "format": {
+				    "months": "<span color='#ffead3'><b>{}</b></span>",
+				    "weekdays": "<span color='#ff0000'><b>{}</b></span>",
+				    "today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+			    }
+		}       
+    },
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{icon} {percent}%",
+		"format-icons": [" 󰃞 ", " 󰃟 ", " 󰃠 "],
+		"on-scroll-up": "brightnessctl set 10%+",
+		"on-scroll-down": "brightnessctl set 10%-",
+		"min-length": 6
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "   {capacity}%",
+		"format-plugged": "   {capacity}%",
+		"format-alt": "{time} {icon}",
+		"format-icons": [" 󰂎 ", " 󰁺 ", " 󰁻 ", " 󰁼 ", " 󰁽 ", " 󰁾 ", " 󰁿 ", " 󰂀 ", " 󰂁 ", " 󰂂 ", " 󰁹 "]
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"tooltip": false,
+		"format-muted": " Muted",
+		"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol",
+		"on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SINK@ 5%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["  ", "  ", "   "]
+		}
+	},
+	
+
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
+}
+
