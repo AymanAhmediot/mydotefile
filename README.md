@@ -33,7 +33,7 @@ sudo pacman -S kvantum-qt5 qt5ct qt6ct ttf-jetbrains-mono nwg-look --noconfirm -
 ## Nemo is default file manager in this config
 
 ```
-sudo pacman -S nemo nemo-compare nemo-python nemo-fileroller  nemo-share nemo-preview  --noconfirm --needed
+sudo pacman -S nemo nemo-python nemo-fileroller  nemo-share nemo-preview  --noconfirm --needed
 ```
 
 ## Paru is the best AUR helper in my opinion and that how you install it
@@ -84,10 +84,10 @@ sudo flatpak override --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config
 ## To add language support we use fcitx5
 
 ```
-sudo pacman -S fcitx5 fcitx5-mozc fcitx5-rime fcitx5-configtool --noconfirm --needed
-echo "export GTK_IM_MODULE=fcitx5" >> ~/.xprofile
-echo "export QT_IM_MODULE=fcitx5" >> ~/.xprofile
-echo "export XMODIFIERS=@im=fcitx5" >> ~/.xprofile
+sudo pacman -S fcitx5 fcitx5-mozc fcitx5-rime fcitx5-configtool fcitx5-gtk fcitx5-qt --noconfirm --needed
+echo "export GTK_IM_MODULE=fcitx" >> ~/.xprofile
+echo "export QT_IM_MODULE=fcitx" >> ~/.xprofile
+echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 ```
 
 ## qt5 theme in system
